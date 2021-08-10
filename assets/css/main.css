@@ -42,10 +42,11 @@
 }
 .sidebar-position {
   border-radius: 10px;
-  padding: 0 20px;
+  padding: 5px 20px;
   background-color: var(--default-bg);
 
   font-size: 15px;
+  font-weight: 500;
   color: var(--primary-text);
   text-align: center;
 }
@@ -120,12 +121,20 @@
 
 /* ul > li skilss */
 .list-skills {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0px;
 }
 .list-skills > .list-item {
   color: var(--primary-text);
   font-size: 15px;
-  list-style: square;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.list-skills > .list-item > .icon {
+  flex-basis: 10%;
+}
+.list-skills > .list-item > div {
+  display: 75%;
 }
 
 /* ul > li */
@@ -557,8 +566,14 @@
 }
 .project-description > p {
   margin: 0;
+  color: var(--second-text);
+  font-size: 15px;
+  font-weight: 500;
+}
+.project-description > p > span {
   color: var(--primary-text);
   font-size: 15px;
+  font-weight: 400;
 }
 .list-project {
   margin: 0 0 0 10px;
@@ -574,7 +589,7 @@
   font-size: 15px;
   padding: 0 0 0 10px;
 }
-.project-description > p > a {
+.project-description > p > span > a {
   margin: 0;
   color: var(--primary-text);
   font-size: 15px;
@@ -587,19 +602,12 @@
 }
 .link-cv__second {
   display: none;
-  text-align: center;
-  margin: 20px 0;
-}
-.link-cv__second > a {
-  font-size: 15px;
-  color: var(--primary-text);
-  font-weight: 500;
-  background-color: var(--default-bg);
-  padding: 10px 20px;
-  border-radius: 10px;
 }
 
 @media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
   .link-cv__second {
     display: none;
   }
@@ -608,6 +616,12 @@
 @media only screen and (max-width: 768px) {
   .link-cv__second {
     display: none;
+  }
+  .sidebar {
+    flex-basis: 25%;
+  }
+  .main-info {
+    flex-basis: 60%;
   }
 }
 
@@ -621,6 +635,7 @@
     flex-basis: 100%;
   }
   .main-info {
+    margin-top: 30px;
     flex-basis: 100%;
   }
   .link-cv {
@@ -628,11 +643,32 @@
   }
   .link-cv__second {
     display: block;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .link-cv__second > a {
+    font-size: 15px;
+    color: var(--primary-text);
+    font-weight: 500;
+    background-color: #e1e9f0;
+    padding: 10px 20px;
+    border-radius: 10px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .res {
-    background-color: pink;
+  .main-yourself__skills > p,
+  .main-yourself__certificate > p,
+  .main-yourself__awards > p,
+  .main-yourself__activities > p,
+  .main-yourself__hobbies > p,
+  .main-info__objective > p,
+  .main-info__education > p,
+  .main-info__workexp > p,
+  .main-info__project > p {
+    font-size: 24px;
+  }
+  .project-description {
+    overflow: hidden;
   }
 }
