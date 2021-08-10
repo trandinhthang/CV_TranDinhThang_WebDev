@@ -1,0 +1,35 @@
+:root {
+  --default-bg: #f5f6f7;
+  --primary-bg: #ffffff;
+  --second-bg: #f5f8f9;
+  --primary-text: #44566c;
+  --second-text: #545454;
+  --blue-text: #03868a;
+}
+* {
+  box-sizing: inherit;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+.divider {
+  border: 1px solid var(--primary-text);
+  opacity: 0.1;
+}
